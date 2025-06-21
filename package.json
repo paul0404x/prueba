@@ -1,4 +1,3 @@
-
 {
   "name": "well-of-power",
   "private": true,
@@ -11,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "expo": "^53.0.12",
     "framer-motion": "^12.18.1",
     "lucide-react": "^0.344.0",
     "react": "^18.3.1",
@@ -32,12 +30,5 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.3.0",
     "vite": "^5.4.2"
-  },
-  "expo": {
-    "doctor": {
-      "reactNativeDirectoryCheck": {
-        "listUnknownPackages": false
-      }
-    }
   }
 }
