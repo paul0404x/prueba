@@ -1,0 +1,277 @@
+[
+  {
+    "id": 0,
+    "titulo": "Bienvenido a MegaPetrol",
+    "personaje_imagen": "paul.png",
+    "escena_imagen": "/assets/background/entrevista.png",
+    "situacion": {
+      "es": "Es tu primer día como pasante en MegaPetrol. El supervisor te presenta el equipo y te explica las normas básicas de seguridad. ¿Cuál es tu primera prioridad?",
+      "en": "It's your first day as an intern at MegaPetrol. The supervisor introduces you to the team and explains basic safety rules. What's your first priority?"
+    },
+    "opciones": [
+      {
+        "texto": {
+          "es": "Memorizar todas las normas de seguridad",
+          "en": "Memorize all safety rules"
+        },
+        "consecuencias": {
+          "conocimiento": 2,
+          "reputacion": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Excelente decisión. La seguridad es lo primero en la industria petrolera. Tu supervisor nota tu seriedad y te felicita.",
+          "en": "Excellent decision. Safety comes first in the petroleum industry. Your supervisor notices your seriousness and congratulates you."
+        },
+        "es_correcta": true
+      },
+      {
+        "texto": {
+          "es": "Hacer networking con los compañeros",
+          "en": "Network with colleagues"
+        },
+        "consecuencias": {
+          "red_contactos": 2,
+          "reputacion": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Buena estrategia. Conocer a tus compañeros te ayudará a integrarte mejor al equipo y aprender más rápido.",
+          "en": "Good strategy. Getting to know your colleagues will help you integrate better into the team and learn faster."
+        }
+      },
+      {
+        "texto": {
+          "es": "Preguntar sobre oportunidades de ascenso",
+          "en": "Ask about promotion opportunities"
+        },
+        "consecuencias": {
+          "reputacion": -1
+        },
+        "respuesta_narrativa": {
+          "es": "Quizás es muy pronto para pensar en ascensos. Tu supervisor te sugiere enfocarte primero en aprender lo básico.",
+          "en": "Maybe it's too early to think about promotions. Your supervisor suggests focusing on learning the basics first."
+        }
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "titulo": "Primera Inspección",
+    "personaje_imagen": "carlos.png",
+    "escena_imagen": "/assets/background/instalacion_pozo.png",
+    "situacion": {
+      "es": "Carlos, el ingeniero senior, te lleva a inspeccionar un pozo. Notas una pequeña fuga en una válvula. ¿Qué haces?",
+      "en": "Carlos, the senior engineer, takes you to inspect a well. You notice a small leak in a valve. What do you do?"
+    },
+    "opciones": [
+      {
+        "texto": {
+          "es": "Reportar inmediatamente la fuga",
+          "en": "Report the leak immediately"
+        },
+        "consecuencias": {
+          "reputacion": 3,
+          "conocimiento": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Perfecto. Carlos está impresionado por tu atención al detalle. 'Así se hace', dice mientras llama al equipo de mantenimiento.",
+          "en": "Perfect. Carlos is impressed by your attention to detail. 'That's how it's done,' he says while calling the maintenance team."
+        },
+        "es_correcta": true
+      },
+      {
+        "texto": {
+          "es": "Esperar a que Carlos la note",
+          "en": "Wait for Carlos to notice it"
+        },
+        "consecuencias": {
+          "conocimiento": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Carlos eventualmente nota la fuga, pero te pregunta por qué no la reportaste. 'Siempre hay que ser proactivo', te aconseja.",
+          "en": "Carlos eventually notices the leak, but asks why you didn't report it. 'You always have to be proactive,' he advises."
+        }
+      },
+      {
+        "texto": {
+          "es": "Intentar repararla tú mismo",
+          "en": "Try to fix it yourself"
+        },
+        "consecuencias": {
+          "reputacion": -2,
+          "conocimiento": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Carlos te detiene inmediatamente. 'Nunca toques equipos sin autorización. Eso es peligroso y va contra los protocolos.'",
+          "en": "Carlos stops you immediately. 'Never touch equipment without authorization. That's dangerous and against protocols.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "titulo": "Crisis en el Pozo",
+    "personaje_imagen": "javier.png",
+    "escena_imagen": "/assets/background/pozo_noche.png",
+    "situacion": {
+      "es": "Durante la noche, se activa la alarma de emergencia. Hay una fuga de gas en el pozo principal. Javier, el supervisor, necesita tu ayuda inmediata.",
+      "en": "During the night, the emergency alarm goes off. There's a gas leak in the main well. Javier, the supervisor, needs your immediate help."
+    },
+    "opciones": [
+      {
+        "texto": {
+          "es": "Activar el protocolo de emergencia",
+          "en": "Activate emergency protocol"
+        },
+        "consecuencias": {
+          "reputacion": 4,
+          "conocimiento": 2,
+          "capital": 5000
+        },
+        "respuesta_narrativa": {
+          "es": "Excelente reacción. Tu rápida respuesta evita un desastre mayor. La empresa reconoce tu valor y te otorga un bono.",
+          "en": "Excellent reaction. Your quick response prevents a major disaster. The company recognizes your value and grants you a bonus."
+        },
+        "es_correcta": true
+      },
+      {
+        "texto": {
+          "es": "Llamar a más personal de apoyo",
+          "en": "Call for more support staff"
+        },
+        "consecuencias": {
+          "red_contactos": 2,
+          "reputacion": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Buena idea, pero el tiempo es crucial. Mientras llega el apoyo, la situación se complica un poco más.",
+          "en": "Good idea, but time is crucial. While support arrives, the situation gets a bit more complicated."
+        }
+      },
+      {
+        "texto": {
+          "es": "Evacuar el área inmediatamente",
+          "en": "Evacuate the area immediately"
+        },
+        "consecuencias": {
+          "reputacion": -1,
+          "capital": -2000
+        },
+        "respuesta_narrativa": {
+          "es": "La evacuación es importante, pero abandonar el pozo sin intentar controlarlo causa pérdidas económicas significativas.",
+          "en": "Evacuation is important, but abandoning the well without trying to control it causes significant economic losses."
+        }
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "titulo": "Reunión con Laura",
+    "personaje_imagen": "laura.png",
+    "escena_imagen": "/assets/background/sala_de_juntas.png",
+    "situacion": {
+      "es": "Laura, la gerente de operaciones, te convoca a una reunión. Te ofrece liderar un proyecto de exploración en aguas profundas. Es una gran oportunidad pero también un gran riesgo.",
+      "en": "Laura, the operations manager, calls you to a meeting. She offers you to lead a deep-water exploration project. It's a great opportunity but also a big risk."
+    },
+    "opciones": [
+      {
+        "texto": {
+          "es": "Aceptar el desafío con confianza",
+          "en": "Accept the challenge with confidence"
+        },
+        "consecuencias": {
+          "reputacion": 3,
+          "conocimiento": 3,
+          "capital": 15000,
+          "red_contactos": 2
+        },
+        "respuesta_narrativa": {
+          "es": "Laura sonríe. 'Me gusta tu actitud. Este proyecto puede catapultar tu carrera.' Te asigna un equipo experimentado.",
+          "en": "Laura smiles. 'I like your attitude. This project can catapult your career.' She assigns you an experienced team."
+        },
+        "es_correcta": true
+      },
+      {
+        "texto": {
+          "es": "Pedir más tiempo para considerarlo",
+          "en": "Ask for more time to consider it"
+        },
+        "consecuencias": {
+          "conocimiento": 1
+        },
+        "respuesta_narrativa": {
+          "es": "Laura asiente comprensivamente. 'Es una decisión importante. Tienes 48 horas para decidir.'",
+          "en": "Laura nods understandingly. 'It's an important decision. You have 48 hours to decide.'"
+        }
+      },
+      {
+        "texto": {
+          "es": "Declinar por falta de experiencia",
+          "en": "Decline due to lack of experience"
+        },
+        "consecuencias": {
+          "reputacion": -2
+        },
+        "respuesta_narrativa": {
+          "es": "Laura parece decepcionada. 'Entiendo tu cautela, pero a veces hay que tomar riesgos para crecer.'",
+          "en": "Laura seems disappointed. 'I understand your caution, but sometimes you have to take risks to grow.'"
+        }
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "El Mentor Sr. Torres",
+    "personaje_imagen": "sr_torres.png",
+    "escena_imagen": "/assets/background/oficina_camper.png",
+    "situacion": {
+      "es": "El Sr. Torres, un veterano de la industria, te toma bajo su ala. Te enseña sobre la política corporativa y las relaciones con inversionistas. ¿Qué aspecto te interesa más?",
+      "en": "Mr. Torres, an industry veteran, takes you under his wing. He teaches you about corporate politics and investor relations. What aspect interests you most?"
+    },
+    "opciones": [
+      {
+        "texto": {
+          "es": "Aprender sobre negociaciones financieras",
+          "en": "Learn about financial negotiations"
+        },
+        "consecuencias": {
+          "conocimiento": 2,
+          "capital": 10000,
+          "red_contactos": 3
+        },
+        "respuesta_narrativa": {
+          "es": "Torres te enseña los secretos de las grandes negociaciones. 'El dinero es importante, pero las relaciones lo son más.'",
+          "en": "Torres teaches you the secrets of big negotiations. 'Money is important, but relationships matter more.'"
+        },
+        "es_correcta": true
+      },
+      {
+        "texto": {
+          "es": "Enfocarse en la gestión de equipos",
+          "en": "Focus on team management"
+        },
+        "consecuencias": {
+          "reputacion": 3,
+          "red_contactos": 2
+        },
+        "respuesta_narrativa": {
+          "es": "Torres comparte su experiencia liderando equipos. 'Un buen líder hace que otros quieran seguirlo.'",
+          "en": "Torres shares his experience leading teams. 'A good leader makes others want to follow him.'"
+        }
+      },
+      {
+        "texto": {
+          "es": "Estudiar las tendencias del mercado",
+          "en": "Study market trends"
+        },
+        "consecuencias": {
+          "conocimiento": 4,
+          "capital": 5000
+        },
+        "respuesta_narrativa": {
+          "es": "Torres te muestra cómo leer el mercado. 'Quien entiende las tendencias, controla el futuro.'",
+          "en": "Torres shows you how to read the market. 'Who understands trends, controls the future.'"
+        }
+      }
+    ]
+  }
+]

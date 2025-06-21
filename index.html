@@ -3,12 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#1e293b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>WELL OF POWER - Novela Visual</title>
     <meta name="description" content="Una novela visual sobre la industria petrolera - Por Paul Mora" />
+    
+    <!-- PWA Icons -->
+    <link rel="apple-touch-icon" href="/pwa-192x192.png" />
+    <link rel="mask-icon" href="/masked-icon.svg" color="#1e293b" />
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/assets/sounds/game1.mp3" as="audio" />
+    <link rel="preload" href="/assets/sounds/click1.mp3" as="audio" />
+    
+    <style>
+      /* Prevent zoom on mobile */
+      html {
+        touch-action: manipulation;
+        -webkit-text-size-adjust: 100%;
+      }
+      
+      /* Loading screen */
+      #loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top-color: #f97316;
+        animation: spin 1s ease-in-out infinite;
+      }
+      
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
+    <div id="loading">
+      <div class="spinner"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Remove loading screen when app loads
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loading = document.getElementById('loading');
+          if (loading) {
+            loading.style.opacity = '0';
+            setTimeout(() => loading.remove(), 500);
+          }
+        }, 1000);
+      });
+    </script>
   </body>
 </html>
